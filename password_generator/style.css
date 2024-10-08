@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    padding: 1.5em;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+button:hover{
+    background-color: rgb(44, 12, 75);
+}
+
+button:active{
+    background-color: rgb(179, 104, 248);
+}

@@ -4,9 +4,11 @@ function generatePassword(length, includesLowercase, includesUppercase, includes
     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numbersChar = "1234567890";
     const symbolChars = "!@#$%^&*()_+~?/><:;";
+    
 
     let allowedChars = "";
     let password = "";
+    const passwordGenerate = document.getElementById("password");
 
     allowedChars += includesLowercase ? lowercaseChars : "";
     allowedChars += includesUppercase ? uppercaseChars : "";
@@ -26,20 +28,21 @@ function generatePassword(length, includesLowercase, includesUppercase, includes
     }
 
     return password;
-   
 }
 
-const passwordLength = 12;
-const includesLowercase = true;
-const includesUppercase = true;
-const includesNumbers = true;
-const includesSymbols = true;
-
-const password = generatePassword(passwordLength,
-                                  includesLowercase,
-                                  includesUppercase,
-                                  includesNumbers,
-                                  includesSymbols
-)     
-
-console.log(password);
+function showPassword(){
+    const passwordLength = 12;
+    const includesLowercase = true;
+    const includesUppercase = true;
+    const includesNumbers = true;
+    const includesSymbols = true;
+    const passwordGenerate = document.getElementById("password");
+    const password = generatePassword(passwordLength,
+        includesLowercase,
+        includesUppercase,
+        includesNumbers,
+        includesSymbols
+    )     
+    passwordGenerate.textContent = `Password: ${password}`;
+    console.log(password);
+}
