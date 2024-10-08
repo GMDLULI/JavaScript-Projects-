@@ -12,5 +12,5 @@ function rollDice(){
     }
     console.log(values);
     diceResult.innerHTML = `dice: ${values}`;
-    diceImages.innerHTML = `<img src="images/dice1.gif"/>`;
+    diceImages.innerHTML = images.join(', ');
 }   
