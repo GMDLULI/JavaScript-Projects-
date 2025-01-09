@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    font-family: monospace;
+    background-color: azure;
+}
+
+
+#stopwatch-container{
+    padding: 13px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#stopwatch{
+    font-weight: bold;
+    font-size: 100px;
+    padding: 10px;
+}
+
+#buttons, button{
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+}
+
+#start, #stop, #reset{
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+}
+#start{
+    background-color: green;
+}
+
+#stop{
+    background-color: red;
+}
+#reset{
+    background-color: blue;
+}
+
+#start:hover{
+    cursor: pointer;
+    background-color: rgb(21, 78, 21);
+}
+
+#stop:hover{
+    cursor: pointer;
+    background-color: rgb(141, 16, 16);
+}
+#reset:hover{
+    cursor: pointer;
+    background-color: rgb(21, 21, 141);
+}
