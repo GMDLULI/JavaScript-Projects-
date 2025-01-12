@@ -370,3 +370,54 @@ function hello(){
 }
 
 setTimeout(hello(), 2000);
+
+// ES6 Module = An external file that contains reusable code 
+//              that can be imported into other JS files.
+// same as TS lessons look at typescript lessons 
+
+
+// synchronous = Executes line by line consecutively in a sequential manner 
+//              code that waits for an operation to complete.
+
+
+
+// asynchronous = Allows multiple operations to perfomr concurrently without replaying on another operation to occur
+//              Doesn't block the execution flow and allows the program to continue running
+//              (I/O) operations, network, requests, fetching data)
+//              handled with : callbacks, Promises, Async/Await
+
+//using callbacks 
+
+function func1(callback){ // asyncrnous function will run the function calledback after executing the console.log("task 1") after 3 seconds 
+    setTimeout(() => {console.log('Tast 1');
+                        callback()}, 3000)
+}
+
+function func2(){ // syncronous function
+    console.log('Task 2')
+    console.log('Task 3')
+    console.log('Task 4')
+
+}
+
+func1(func1);
+
+// Error = An object that is created to represent a problem that occurs
+//         Occur ofthen with user input or estabhlishing a conneection 
+// use try, catch and finally to handle errors 
+
+
+try{
+    const divided = window.prompt('Enter a dividend: ');
+    const divisor = window.prompt("Enter a divisor: ");
+
+    if(divisor == 0){
+        throw new Error("You cant't divide by zero!");
+
+    }
+    const result = divided /divisor;
+}catch(error){
+    console.log(error);
+}finally{
+    console.log('this executes anyway')
+}
